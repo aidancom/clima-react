@@ -33,7 +33,7 @@ export const useWeather = () => {
     setWeather(initialWeather)
     try {
       if (alert) setAlert(false)
-      const {data} = await axios(`http://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&limit=1&appid=${import.meta.env.VITE_API_KEY}`)
+      const {data} = await axios(`https://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&limit=1&appid=${import.meta.env.VITE_API_KEY}`)
       if (!data[0]) {
        setAlert(true)
        return
